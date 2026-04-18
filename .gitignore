@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+docling/
+venv/
+.venv/
+
+# AI Models (CRITICAL: Do not upload GBs of weights to GitHub)
+models_cache/
+*.safetensors
+*.bin
+*.pth
+*.onnx
+
+# Data & Storage
+rag_storage/
+data/
+*.pdf
+*.csv
+*.md
+!README.md
+!docs/*.md
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
