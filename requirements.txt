@@ -1,0 +1,27 @@
+# Core RAG & Parsing
+docling==2.26.0
+docling-core==2.74.0
+docling-ibm-models==3.13.0
+docling-parse==3.4.0
+
+# AI Models & Logic
+transformers==4.57.6
+torch==2.11.0
+sentence-transformers==5.4.1
+huggingface-hub
+accelerate
+safetensors
+pillow
+numpy
+pydantic
+pydantic-settings
+
+# Vector Database
+chromadb==1.5.8
+
+# GUI & Previews
+streamlit
+pypdfium2
+
+# OCR Support
+easyocr

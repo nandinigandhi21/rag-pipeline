@@ -1,0 +1,1162 @@
+[
+  {
+    "id": "temp_upload_0000",
+    "text": "/phone +91-6280911664",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": null,
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            92.381,
+            732.986,
+            174.368,
+            724.063
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0001",
+    "text": "August 2022 - Present",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Shaheed Bhagat Singh State University"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            468.212,
+            697.2950000000001,
+            582.479,
+            688.551
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0002",
+    "text": "Bachelor of Technology in Computer Science Engineering - CGPA - 9.6",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Shaheed Bhagat Singh State University"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            28.800000000000004,
+            685.113,
+            405.552,
+            674.619
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0003",
+    "text": "Ferozepur, Punjab",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Shaheed Bhagat Singh State University"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            502.39400000000006,
+            683.716,
+            581.853,
+            675.0100000000001
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0004",
+    "text": "August 2023 - Present",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Shaheed Bhagat Singh State University"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            468.212,
+            664.747,
+            582.479,
+            656.003
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0005",
+    "text": "Minor Degree in Artificial Intelligence and Machine Learning - CGPA - 9.4",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Shaheed Bhagat Singh State University"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            28.800000000000004,
+            652.565,
+            425.815,
+            642.071
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0006",
+    "text": "Ferozepur, Punjab",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Shaheed Bhagat Singh State University"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            502.39400000000006,
+            651.168,
+            581.853,
+            642.462
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0007",
+    "text": "2021-2022",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "DN Model Sr. Sec. School"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            532.833,
+            632.199,
+            582.48,
+            623.455
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0008",
+    "text": "Senior Secondary - Non-Medical - Percentage - 95%",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "DN Model Sr. Sec. School"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            28.800000000000004,
+            620.017,
+            309.611,
+            609.523
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0009",
+    "text": "Moga, Punjab",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "DN Model Sr. Sec. School"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            521.605,
+            618.62,
+            581.855,
+            609.914
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0010",
+    "text": "- • Data Structures & Algorithms",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            46.799,
+            581.412,
+            144.532,
+            558.328
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0011",
+    "text": "- • Operating Systems",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            46.799,
+            551.324,
+            146.526,
+            541.79
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0012",
+    "text": "- • Computer Networks",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            184.97,
+            581.412,
+            290.124,
+            571.878
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0013",
+    "text": "- • Database Management System (DBMS)",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            184.97,
+            564.874,
+            303.248,
+            541.79
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0014",
+    "text": "- • Artificial Intelligence",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            323.141,
+            581.412,
+            432.136,
+            571.878
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0015",
+    "text": "- • OOPS Concept",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            323.141,
+            564.874,
+            405.897,
+            555.34
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0016",
+    "text": "- • Web Development",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            461.312,
+            581.412,
+            557.399,
+            571.878
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0017",
+    "text": "- • Machine Learning",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "COURSEWORK / SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            461.312,
+            564.874,
+            556.217,
+            555.34
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0018",
+    "text": "- · Developed a machine learning model to predict car prices based on 3,000+ records and 5+ features such as brand, mileage, and year of manufacture.\n- · Achieved a prediction accuracy of 91% using Linear Regression Model.\n- · Performed exploratory data analysis (EDA) to identify correlations, reducing data redundancy by 15% .\n- · Created 7+ interactive data visualizations with Matplotlib and Seaborn to highlight key trends in car pricing.",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Car Price Predictor /external_link | Python, Machine Learning, Pandas, NumPy, Scikit-learn August 2024 - September 202"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            503.574,
+            582.482,
+            482.052
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            479.42,
+            394.834,
+            469.844
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            467.221,
+            550.164,
+            457.645
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            455.02099999999996,
+            563.547,
+            433.4990000000001
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0019",
+    "text": "October 2024 - December 2024",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "PresentEase /external_link | PHP, SQL, HTML, CSS, JavaScript"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            425.407,
+            424.56,
+            583.034,
+            415.816
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0020",
+    "text": "- · Built a student attendance management system supporting 3 user roles (Admin, Teacher, Student) and 200+ monthly active users .\n- · Designed an SQL database managing 5,000+ records and processing 10,000+ queries/month .\n- · Automated attendance reporting, reducing manual effort by 80% .\n- · Enhanced system usability by integrating real-time admin workflows for medical leave submissions.",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "PresentEase /external_link | PHP, SQL, HTML, CSS, JavaScript"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            411.471,
+            556.199,
+            389.939
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            387.316,
+            526.81,
+            377.74
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            375.11699999999996,
+            369.407,
+            365.541
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            362.885,
+            526.59,
+            353.35100000000006
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0021",
+    "text": "October 2024 - Present",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "UrbanFlow /external_link | Python, Flask, IoT, Google Maps API, SQL, OpenCV"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            464.329,
+            344.411,
+            583.037,
+            335.667
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0022",
+    "text": "- · Developed a smart parking system tracking 50+ slots daily , reducing search time by 30% for 200+ users/month .\n- · Built a routing application that improved navigation for 500+ drivers/week , achieving 25% faster travel times .\n- · Maintained an SQL database handling 15,000+ entries/month for traffic and parking data analytics.",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "UrbanFlow /external_link | Python, Flask, IoT, Google Maps API, SQL, OpenCV"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            331.32199999999995,
+            542.264,
+            309.791
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            307.167,
+            577.129,
+            285.636
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            283.013,
+            550.775,
+            273.437
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0023",
+    "text": "Languages:",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "TECHNICAL SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            39.599,
+            248.06500000000005,
+            100.009,
+            238.48900000000003
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0024",
+    "text": "Python, C, C++, SQL, HTML, CSS, JavaScript, Prolog, PHP",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "TECHNICAL SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            104.437,
+            248.03200000000004,
+            403.746,
+            238.49800000000005
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0025",
+    "text": "Developer Tools: VS Code, Replit, Oracle Live SQL, MySQL, PyCharm",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "TECHNICAL SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            39.599,
+            236.11,
+            397.21,
+            226.534
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0026",
+    "text": "Technologies/Frameworks:",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "TECHNICAL SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            39.599,
+            224.15499999999997,
+            184.485,
+            214.57899999999995
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0027",
+    "text": "Linux, GitHub, Git, Flutter, Flask",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "TECHNICAL SKILLS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            189.328,
+            224.12200000000007,
+            354.873,
+            214.58799999999997
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0028",
+    "text": "February 2024",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Volunteer"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            510.459,
+            188.265,
+            582.485,
+            179.52099999999996
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0029",
+    "text": "Shaheed Bhagat Singh State University",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Volunteer"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            412.511,
+            174.68600000000004,
+            581.598,
+            165.98000000000002
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0030",
+    "text": "- · Collaborated with a team of 30+ members to organize a cultural and recreational event attended by 500+ participants and managed on-site activities such as registrations, crowd control, and technical setups, ensuring a seamless experience",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Volunteer"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            162.485,
+            576.99,
+            129.00700000000006
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0031",
+    "text": "October 2024",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Member"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            515.212,
+            116.31299999999999,
+            582.477,
+            107.56899999999996
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0032",
+    "text": "Shaheed Bhagat Singh State University",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Member"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            412.511,
+            102.73400000000004,
+            581.598,
+            94.02800000000002
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0033",
+    "text": "- · Contributed to the planning and execution of 15+ campus events , enhancing student engagement and participation in various technical and non-technical events organized by the society.",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Member"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            43.526,
+            90.53300000000002,
+            555.103,
+            69.01099999999997
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0034",
+    "text": "- · Summer Training\n- · Essay Writing Competition\n- · University Hackathon - Winner\n- · AI Workshop\n- · National Level Hackathon - VGU, Jaipur",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "CERTIFICATIONS"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            28.800000000000004,
+            42.60000000000002,
+            122.758,
+            33.06600000000003
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            175.383,
+            42.60000000000002,
+            316.247,
+            33.06600000000003
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            28.800000000000004,
+            29.051000000000045,
+            188.077,
+            19.517000000000053
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            396.938,
+            42.60000000000002,
+            470.1240000000001,
+            33.06600000000003
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            223.69400000000002,
+            29.051000000000045,
+            430.73099999999994,
+            19.517000000000053
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0035",
+    "text": "Moga, Punjab nandinigandhi215@gmail.com",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Nandini Gandhi"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "text"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            271.927,
+            746.368,
+            339.351,
+            736.834
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            271.927,
+            746.368,
+            339.351,
+            736.834
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  },
+  {
+    "id": "temp_upload_0036",
+    "text": "- /linkedin_sign Nandini Gandhi\n- /github nandinigandhi21",
+    "metadata": {
+      "source": "temp_upload.pdf",
+      "headings": [
+        "Nandini Gandhi"
+      ],
+      "page_numbers": [
+        1
+      ],
+      "labels": [
+        "list_item"
+      ],
+      "bboxes": [
+        {
+          "page": 1,
+          "bbox": [
+            336.539,
+            732.7689999999999,
+            418.481,
+            723.699
+          ]
+        },
+        {
+          "page": 1,
+          "bbox": [
+            428.44499999999994,
+            732.7689999999999,
+            512.26,
+            723.699
+          ]
+        }
+      ],
+      "doc_title": "temp_upload"
+    }
+  }
+]

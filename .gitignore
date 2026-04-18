@@ -34,11 +34,11 @@ models_cache/
 *.onnx
 
 # Data & Storage
-rag_storage/
-data/
-*.pdf
-*.csv
-*.md
+# rag_storage/
+# data/
+# *.pdf
+# *.csv
+# *.md
 !README.md
 !docs/*.md
 

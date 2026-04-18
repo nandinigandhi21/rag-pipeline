@@ -1,0 +1,4 @@
+training data,07+12,07++12
+test data,VOC 07 test,VOC 12 test
+VGG-16,73.2,70.4
+ResNet-101,76.4,73.8

@@ -1,0 +1,7 @@
+LOC method,LOC network,testing,LOC error on GT CLS,classification network,top-5 LOC error on predicted CLS
+VGG's [41] RPN RPN,VGG-16,1-crop 1-crop dense,33.1 [41] 13.3,,
+,ResNet-101,,,,
+,ResNet-101,,11.7,,
+RPN,ResNet-101,dense,,ResNet-101,14.4
+RPN+RCNN ResNet-101,,dense,,ResNet-101,10.6
+RPN+RCNN,ensemble,dense,,ensemble,8.9

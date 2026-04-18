@@ -1,0 +1,93 @@
+DOCLING OFFLINE SETUP GUIDE (COMPREHENSIVE)
+==============================================
+
+This document contains the final steps to set up Docling on your offline Windows (Python 3.13) machine with all complex features (Formulas, Tables, and OCR) enabled.
+
+STEP 1: PREPARATION (COMPLETED ON ONLINE PC)
+--------------------------------------------
+You have already generated the 'C:\docling_dist' folder which contains:
+- /wheels: All 50+ Python dependencies for Docling, RapidOCR, and EasyOCR.
+- /models_cache: Full set of models (CodeFormulaV2, TableFormerV2, Layout, and OCR).
+- /system_deps: The Microsoft Visual C++ Redistributable installer.
+
+ACTION: Copy the entire 'C:\docling_dist' folder to your USB drive.
+
+
+STEP 2: SYSTEM SETUP (ON OFFLINE PC)
+------------------------------------
+1. Open the 'system_deps' folder on your USB.
+2. Run 'vc_redist.x64.exe'.
+3. Follow the installation prompts and RESTART the computer.
+
+
+STEP 3: INSTALL PYTHON PACKAGES (ON OFFLINE PC)
+-----------------------------------------------
+1. Open PowerShell on the offline machine.
+2. Navigate to your 'docling_dist' folder on the USB or local drive.
+3. Run this command:
+   pip install --no-index --find-links=./wheels docling[rapidocr] easyocr
+
+
+STEP 4: RUN FULL-POWER OFFLINE TEST (ON OFFLINE PC)
+---------------------------------------------------
+Create a file named 'offline_test.py' and use the following code to verify all complex features:
+
+```python
+import os
+import time
+from docling.document_converter import DocumentConverter, PdfFormatOption
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions, RapidOcrOptions
+
+# 1. CRITICAL OFFLINE PATHS (Update BASE_PATH if your folder is moved)
+BASE_PATH = r"C:/docling_dist/models_cache" 
+os.environ["DOCLING_ARTIFACTS_PATH"] = BASE_PATH
+os.environ["HF_HUB_OFFLINE"] = "1"
+
+def run_complex_parse(pdf_path):
+    # 2. CONFIGURE "FULL POWER" PIPELINE
+    pipeline_options = PdfPipelineOptions()
+    pipeline_options.artifacts_path = BASE_PATH
+    
+    # Enable Formula Enrichment (LaTeX)
+    pipeline_options.do_formula_enrichment = True 
+    
+    # Enable Advanced Table Structure
+    pipeline_options.do_table_structure = True
+    pipeline_options.table_structure_options.do_cell_matching = True
+    
+    # Enable Offline OCR (RapidOcr)
+    pipeline_options.do_ocr = True
+    pipeline_options.ocr_options = RapidOcrOptions() 
+
+    # 3. Initialize and Convert
+    converter = DocumentConverter(
+        format_options={
+            InputFormat.PDF: PdfFormatOption(pipeline_options=pipeline_options)
+        }
+    )
+
+    try:
+        print(f"--- Starting Full-Power Parsing ---")
+        start_time = time.time()
+        result = converter.convert(pdf_path)
+        
+        # Export result
+        markdown_output = result.document.export_to_markdown()
+        with open("offline_result.md", "w", encoding="utf-8") as f:
+            f.write(markdown_output)
+            
+        print(f"SUCCESS! Result saved to verify_output.md")
+    except Exception as e:
+        print(f"ERROR: {str(e)}")
+
+if __name__ == "__main__":
+    run_complex_parse("your_test_document.pdf")
+```
+
+TROUBLESHOOTING:
+----------------
+- If you get "ModuleNotFound" errors: Ensure you installed the wheels using the command in Step 3.
+- If you get "ConnectionError" to HuggingFace: Ensure os.environ["HF_HUB_OFFLINE"] = "1" is at the VERY TOP of your script.
+- If you get "AttributeError" on models: Ensure BASE_PATH points exactly to your 'models_cache' folder.
+- If you get "DLL Load Failed": Ensure Step 2 (VC Redist install and RESTART) was completed.
