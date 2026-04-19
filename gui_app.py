@@ -40,89 +40,20 @@ def clear_memory():
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="Eagle Eye RAG 🦅",
-    page_icon="🦅",
+    page_title="Document Querying System",
+    page_icon="📄",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# --- THEME MANAGEMENT (Custom CSS) ---
-def apply_custom_theme(mode):
-    if mode == "Purplish-Dark":
-        st.markdown("""
-            <style>
-            /* Global Background and Text */
-            .stApp {
-                background-color: #0d1117;
-                color: #f0f6fc;
-            }
-            
-            /* Sidebar Styling */
-            [data-testid="stSidebar"] {
-                background-color: #161b22;
-                border-right: 1px solid #30363d;
-            }
-
-            /* Headers and Labels */
-            h1, h2, h3, p, span, label, .stMarkdown {
-                color: #f0f6fc !important;
-            }
-
-            /* Buttons */
-            .stButton>button {
-                background-color: #238636;
-                color: white !important;
-                border-radius: 6px;
-                border: 1px solid rgba(240,246,252,0.1);
-                padding: 0.5rem 1rem;
-                font-weight: 600;
-            }
-            .stButton>button:hover {
-                background-color: #2ea043;
-                border-color: #8b949e;
-            }
-
-            /* Input Fields */
-            .stTextInput>div>div>input, .stNumberInput>div>div>input, .stTextArea>div>div>textarea {
-                background-color: #0d1117 !important;
-                color: #f0f6fc !important;
-                border: 1px solid #30363d !important;
-                border-radius: 6px;
-            }
-            
-            /* Chat Messages */
-            .chat-message.user {
-                background-color: #1f6feb;
-                color: #ffffff !important;
-                padding: 1.2rem;
-                border-radius: 12px;
-                margin-bottom: 1rem;
-                border-bottom-right-radius: 2px;
-            }
-            .chat-message.bot {
-                background-color: #21262d;
-                color: #f0f6fc !important;
-                padding: 1.2rem;
-                border-radius: 12px;
-                margin-bottom: 1rem;
-                border: 1px solid #30363d;
-                border-bottom-left-radius: 2px;
-            }
-
-            /* Expander Styling */
-            .p-expander-content {
-                background-color: #161b22 !important;
-                border: 1px solid #30363d !important;
-            }
-            </style>
-        """, unsafe_allow_html=True)
-    else:
-        st.markdown("""
-            <style>
-            .stApp { background-color: #f8f9fa; }
-            .stButton>button { border-radius: 8px; }
-            </style>
-        """, unsafe_allow_html=True)
+# --- LIGHT THEME STYLING ---
+st.markdown("""
+    <style>
+    .stApp { background-color: #ffffff; color: #000000; }
+    .stButton>button { border-radius: 8px; background-color: #f0f2f6; border: 1px solid #d1d5db; }
+    [data-testid="stSidebar"] { background-color: #f8f9fa; border-right: 1px solid #e5e7eb; }
+    </style>
+""", unsafe_allow_html=True)
 
 # --- SESSION STATE ---
 if "messages" not in st.session_state:
@@ -132,12 +63,7 @@ if "pdf_processed" not in st.session_state:
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.image("https://raw.githubusercontent.com/DS4SD/docling/main/docs/assets/docling_logo.png", width=150)
     st.title("Control Center")
-    
-    theme_mode = st.radio("UI Theme", ["Purplish-Dark", "Light Mode"])
-    apply_custom_theme(theme_mode)
-    
     st.divider()
     
     uploaded_file = st.file_uploader("Upload Technical PDF", type="pdf")
@@ -155,8 +81,15 @@ with st.sidebar:
         max_pages = len(pdf)
         
         st.subheader("Parsing Options")
-        start_pg = st.number_input("Start Parsing at Page", min_value=1, max_value=max_pages, value=1)
-        end_pg = st.number_input("End Parsing at Page", min_value=start_pg, max_value=max_pages, value=max_pages)
+        
+        # Page Selection Slider
+        page_range = st.slider(
+            "Select Page Range to Parse",
+            min_value=1,
+            max_value=max_pages,
+            value=(1, max_pages)
+        )
+        start_pg, end_pg = page_range
         
         collection_name = st.text_input("Collection Name", value=uploaded_file.name.split('.')[0][:20])
         
@@ -186,10 +119,10 @@ with st.sidebar:
         clear_memory()
 
 # --- MAIN INTERFACE ---
-st.title("Eagle Eye RAG 🦅")
+st.title("Document Querying System")
 st.caption("High-Accuracy Technical Document Reasoning")
 
-tab1, tab2 = st.tabs(["💬 Technical Chat", "🖼️ PDF Preview"])
+tab1, tab2 = st.tabs(["💬 Chat", "📄 Preview"])
 
 with tab2:
     if uploaded_file:
