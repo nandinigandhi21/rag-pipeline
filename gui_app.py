@@ -51,36 +51,69 @@ def apply_custom_theme(mode):
     if mode == "Purplish-Dark":
         st.markdown("""
             <style>
+            /* Global Background and Text */
             .stApp {
-                background-color: #0f0c29;
-                background-image: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-                color: #e0e0e0;
+                background-color: #0d1117;
+                color: #f0f6fc;
             }
+            
+            /* Sidebar Styling */
             [data-testid="stSidebar"] {
-                background-color: #1a1a2e;
-                border-right: 1px solid #4b0082;
+                background-color: #161b22;
+                border-right: 1px solid #30363d;
             }
+
+            /* Headers and Labels */
+            h1, h2, h3, p, span, label, .stMarkdown {
+                color: #f0f6fc !important;
+            }
+
+            /* Buttons */
             .stButton>button {
-                background-color: #6a5acd;
-                color: white;
-                border-radius: 8px;
-                border: none;
-                transition: 0.3s;
+                background-color: #238636;
+                color: white !important;
+                border-radius: 6px;
+                border: 1px solid rgba(240,246,252,0.1);
+                padding: 0.5rem 1rem;
+                font-weight: 600;
             }
             .stButton>button:hover {
-                background-color: #483d8b;
-                transform: scale(1.02);
+                background-color: #2ea043;
+                border-color: #8b949e;
             }
-            .stTextInput>div>div>input, .stNumberInput>div>div>input {
-                background-color: #16213e;
-                color: white;
-                border: 1px solid #4b0082;
+
+            /* Input Fields */
+            .stTextInput>div>div>input, .stNumberInput>div>div>input, .stTextArea>div>div>textarea {
+                background-color: #0d1117 !important;
+                color: #f0f6fc !important;
+                border: 1px solid #30363d !important;
+                border-radius: 6px;
             }
-            .chat-message {
-                padding: 1.5rem; border-radius: 0.8rem; margin-bottom: 1rem; display: flex;
+            
+            /* Chat Messages */
+            .chat-message.user {
+                background-color: #1f6feb;
+                color: #ffffff !important;
+                padding: 1.2rem;
+                border-radius: 12px;
+                margin-bottom: 1rem;
+                border-bottom-right-radius: 2px;
             }
-            .chat-message.user { background-color: #2e2e4e; }
-            .chat-message.bot { background-color: #1a1a2e; border: 1px solid #4b0082; }
+            .chat-message.bot {
+                background-color: #21262d;
+                color: #f0f6fc !important;
+                padding: 1.2rem;
+                border-radius: 12px;
+                margin-bottom: 1rem;
+                border: 1px solid #30363d;
+                border-bottom-left-radius: 2px;
+            }
+
+            /* Expander Styling */
+            .p-expander-content {
+                background-color: #161b22 !important;
+                border: 1px solid #30363d !important;
+            }
             </style>
         """, unsafe_allow_html=True)
     else:
