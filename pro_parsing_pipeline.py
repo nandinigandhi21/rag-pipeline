@@ -22,7 +22,7 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.datamodel.base_models import InputFormat
 from docling.datamodel.pipeline_options import PdfPipelineOptions, RapidOcrOptions
 from docling_core.types.doc.base import ImageRefMode
-from docling.chunking import HierarchicalChunker
+from docling.chunking import HierarchicalChunker, HybridChunker
 
 # Professional Logging Setup
 logging.basicConfig(
@@ -38,46 +38,45 @@ logger = logging.getLogger("OfflineParser311")
 class IngestionEngine:
     """
     Best-Practice Offline Ingestion Engine for Python 3.11.
-    Optimized for stability, speed, and structural chunking.
+    Optimized for certificates, forms, and technical docs.
     """
-    def __init__(self, use_ocr: bool = True, use_formula: bool = False):
-        logger.info("Initializing IngestionEngine [OFFLINE MODE]")
-        logger.info(f"Using 311 Model Cache: {MODEL_CACHE_DIR}")
+    def __init__(self, use_ocr: bool = True, use_formula: bool = False, chunk_strategy: str = "hybrid"):
+        logger.info(f"Initializing IngestionEngine [OFFLINE MODE] - Strategy: {chunk_strategy}")
         
         # 1. Setup Pipeline Options
         self.pipeline_options = PdfPipelineOptions()
-        
-        # WE DO NOT set artifacts_path manually here to avoid internal logic breakage.
-        # Docling will find them via DOCLING_ARTIFACTS_PATH env var automatically.
-        
-        # 2. Configure Features
         self.pipeline_options.do_table_structure = True
         self.pipeline_options.table_structure_options.do_cell_matching = True
         self.pipeline_options.generate_picture_images = True
         self.pipeline_options.do_code_enrichment = True
-        
-        # 3. Handle Formula Enrichment (Disabled by default for stability)
         self.pipeline_options.do_formula_enrichment = use_formula
         
-        # 4. Configure RapidOCR (Standard for 311 offline)
+        # 2. Configure OCR
         if use_ocr:
             self.pipeline_options.do_ocr = True
-            # We use default RapidOcrOptions to let Docling find files via the Artifacts Path
             self.pipeline_options.ocr_options = RapidOcrOptions()
             logger.info("OCR Enabled: RapidOCR")
         else:
             self.pipeline_options.do_ocr = False
             logger.info("OCR Disabled")
 
-        # 5. Initialize Converter
+        # 3. Initialize Converter
         self.converter = DocumentConverter(
             format_options={
                 InputFormat.PDF: PdfFormatOption(pipeline_options=self.pipeline_options)
             }
         )
         
-        # 6. Setup Hierarchical Chunker (Best for RAG/Offline context)
-        self.chunker = HierarchicalChunker()
+        # 4. Setup Chunker
+        if chunk_strategy == "hybrid":
+            # Use the tokenizer from CodeFormulaV2 cache (it's a valid HF tokenizer)
+            tokenizer_path = str(Path(MODEL_CACHE_DIR) / "docling-project--CodeFormulaV2")
+            logger.info(f"Using HybridChunker with tokenizer: {tokenizer_path}")
+            # merge_peers=True helps keep labels and values together
+            self.chunker = HybridChunker(tokenizer=tokenizer_path, max_tokens=512, merge_peers=True)
+        else:
+            logger.info("Using HierarchicalChunker")
+            self.chunker = HierarchicalChunker()
 
     def process(self, pdf_path: str, output_root: str, skip_start: int = 0, skip_end: int = 0):
         pdf_path = Path(pdf_path)
@@ -98,7 +97,7 @@ class IngestionEngine:
         
         start_time = time.time()
 
-        # Step 1: Initial Parsing (Get Metadata)
+        # Step 1: Initial Parsing
         logger.info("Parsing document structure...")
         conv_res = self.converter.convert(pdf_path)
         total_pages = len(conv_res.pages)
@@ -112,7 +111,6 @@ class IngestionEngine:
         logger.info(f"Page Range Selected: {start_p} to {end_p}")
 
         # Step 2: Refined Parsing for Page Range
-        # Note: Re-parsing ensures the Markdown and Chunks are perfectly synced
         logger.info(f"Extracting content from pages {start_p}-{end_p}...")
         range_res = self.converter.convert(pdf_path, page_range=(start_p, end_p))
         doc = range_res.document
@@ -141,8 +139,8 @@ class IngestionEngine:
             f.write(doc.export_to_markdown(image_mode=ImageRefMode.REFERENCED))
         logger.info("Markdown saved.")
 
-        # Step 6: Structural Chunking
-        logger.info("Generating structural chunks...")
+        # Step 6: Chunking
+        logger.info("Generating chunks...")
         chunks_data = []
         for i, chunk in enumerate(self.chunker.chunk(dl_doc=doc)):
             page_numbers = set()
@@ -182,10 +180,16 @@ if __name__ == "__main__":
         s_start = int(input("3. Pages to skip from START (default 0): ") or 0)
         s_end = int(input("4. Pages to skip from END (default 0): ") or 0)
         
-        use_f = input("5. Enable Formula Enrichment? (High Accuracy, but slower) [y/N]: ").lower().strip() == 'y'
+        print("\nChunking Strategies:")
+        print(" [1] Hybrid (Best for Certificates/Forms - keeps labels and values together)")
+        print(" [2] Hierarchical (Best for long Books/Reports)")
+        strat_choice = input("6. Select strategy [1/2] (default 1): ").strip()
+        strategy = "hierarchical" if strat_choice == "2" else "hybrid"
+
+        use_f = input("7. Enable Formula Enrichment? [y/N]: ").lower().strip() == 'y'
         
         # Initialize Engine
-        engine = IngestionEngine(use_ocr=True, use_formula=use_f)
+        engine = IngestionEngine(use_ocr=True, use_formula=use_f, chunk_strategy=strategy)
         engine.process(f_path, o_root, s_start, s_end)
         
     except KeyboardInterrupt:
@@ -194,8 +198,6 @@ if __name__ == "__main__":
         logger.error(f"FATAL ERROR: {e}")
         print(f"\n[ERROR]: {e}")
     finally:
-        # Explicitly delete the engine to trigger destructors 
-        # while the logging module is still active.
         if engine:
             logger.info("Cleaning up resources...")
             del engine
